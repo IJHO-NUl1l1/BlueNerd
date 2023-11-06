@@ -33,9 +33,9 @@ function Edit() {
 
     return (
         <div className="Edit">
-            <div className="content-wrapper">
+            <div className="content-wrapper-Edit">
                 <div className="box">
-                    <img src={cardImage} alt="Profile" className="profile-img" />
+                    <img src={cardImage} alt="Profile" className="profile-img-Edit" />
                     <div className="info-input">
                         <label>
                             <span></span>

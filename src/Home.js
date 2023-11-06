@@ -26,11 +26,20 @@ function Home() {
     const navigateToHome = () => {
         navigate("/");
     };
-    
 
+    const navigateToWallet2 = () => {
+        navigate("/Wallet2");
+    };
+
+    const navigateToOpenfile = () => {
+        navigate("/Openfile");
+    };
+    
     const handleMouseDown = (e) => {
         setStartY(e.clientY);
     };
+
+    
 
     const handleMouseUp = (e) => {
         if (slideUp) { 
@@ -46,7 +55,7 @@ function Home() {
 
     return (
         <div className="Home">
-            <div className="content-wrapper">
+            <div className="content-wrapper-Home">
                 <div className="settings-notification">
                     <button className="icon-button">
                         <div className="bell-icon-wrapper">
@@ -63,7 +72,8 @@ function Home() {
                 <div className="card-section">
                     {cardOpen && (
                         <div className="button-container">
-                            <button className="action-button file-button">
+                            <button className="action-button file-button"
+                             onClick={navigateToOpenfile}>
                                 <div className="icon file-icon"></div>
                                 파일
                             </button>
@@ -82,7 +92,7 @@ function Home() {
                         ref={cardRef}
                         src={cardImage}
                         alt="Business Card" 
-                        className={`card-image ${cardOpen ? 'moved' : ''} ${slideUp ? 'slide-up' : ''}`}
+                        className={`card-image-Home ${cardOpen ? 'moved' : ''} ${slideUp ? 'slide-up' : ''}`}
                         onMouseDown={handleMouseDown}
                         onMouseUp={handleMouseUp}
                     />
@@ -131,7 +141,8 @@ function Home() {
                     onClick={navigateToHome}></button>
                     <button className="nav-button2"
                     onClick={navigateToCardBook}></button>
-                    <button className="nav-button3"></button>
+                    <button className="nav-button3"
+                    onClick={navigateToWallet2}></button>
                 </div>
             </div>
         </div>

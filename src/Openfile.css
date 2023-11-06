@@ -1,19 +1,19 @@
-.Edit {  /* 변경된 부분 */
-  font-family: Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #FFFFFF;
-}
-
-.content-wrapper-Edit {
+.Openfile {  /* 변경된 부분 */
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FFFFFF;
+  }
+  
+.content-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 375px;
-  height: 800px;
+  height: 795px;
   background-color: #E6E6E6;
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -24,46 +24,21 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+  
 
-.box {
-  position:relative;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  top: 5%;
+.fileboxplus-image {
+    width: 150px; /* 원하는 너비로 조절 */
+    height: auto; /* 높이를 자동으로 조절하여 가로 세로 비율 유지 */
+    margin-top: 170px;
+    text-align: center;
 }
-
-/* 이미 존재하는 .profile-img와 .info-input 스타일은 그대로 유지하면 됩니다. */
-
-
-.profile-img-Edit {
-  position : relative;
-  width: 101%; /* 원하는 크기로 조절하실 수 있습니다. */
-  margin: 0 0 100px 0; 
+.filebox-container {
+    text-align: center; /* 가운데 정렬을 위한 스타일 */
 }
-
-
-.info-input label {
-  display: block;
-  margin-bottom: 1rem;
+.filebox-container p {
+    font-weight: 300; /* 폰트 가중치를 가늘게 설정 */
+    color: #757575; /* 회색에 가까운 색으로 설정 */
 }
-
-.info-input input {
-  height: 30px;
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #f7f7f7;
-
-}
-
 .bottom-sidebar {
   background-color: #FFFFFF;
   display: flex;
@@ -79,6 +54,7 @@
   left: 50%; /* 중앙에 위치 */
   transform: translateX(-50%);
   justify-content: space-between; /* 이 부분을 space-around로 변경하세요 */
+  margin-bottom: 15px;
 }
 
 .nav-button1,
@@ -157,4 +133,82 @@
 }
 .nav-button3:after {
   content: "지갑관리";
+}
+
+.search-bar {
+  display: flex;
+  width: 90%; /* 수정: 너비 조절 */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 30px;
+  position:relative;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  height: 100%;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  padding-left: 1rem;
+  height: 100%;
+}
+
+.search-button img {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-box1, .profile-box2 {
+  width: 100%; /* content-wrapper의 가로 길이와 동일하게 설정합니다 */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box; /* padding값을 포함한 너비를 유지하기 위함 */
+  border-bottom: 1px solid #E6E6E6; /* 구분을 위한 하단 경계선. 필요 없을 경우 제거해주세요 */
+  position:relative;
+  margin-top:40px;
+  margin-bottom: 40px; /* Add bottom margin to separate the boxes if they are adjacent */
+}
+
+.profile-box1 + .profile-box2 {
+  margin-top: -1rem;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px; /* To make it circular */
+  background-color: #d1d1d1; /* Placeholder color, you can replace with actual image */
+  margin-right: 15px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info .name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.profile-info .company {
+  font-size: 14px;
+  color: #888;
+}
+
+.profile-box:last-child {
+  border-bottom: none; /* 마지막 프로필 박스는 하단 경계선을 제거합니다 */
+}
+
+.highlight {
+  color: blue;
 }
